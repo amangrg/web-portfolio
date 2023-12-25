@@ -1,0 +1,32 @@
+---
+type: page
+title: Art
+date: 2023-12-24
+---
+
+# Artwork
+
+Here's some of my artwork.
+
+import Image from 'next/image'
+
+export function Images() {
+  let arr = []
+  for (let i = 0; i < 18; i++) {
+    arr.push(
+      <Image
+        src={`/images/art-${i}.png`}
+        alt="Art"
+        width={1125}
+        height={750}
+        priority
+        className="next-image"
+        key={i}
+        style={{ marginBottom: '48px' }}
+      />
+    )
+  }
+  return arr
+}
+
+<Images />
