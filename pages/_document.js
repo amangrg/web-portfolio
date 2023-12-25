@@ -5,7 +5,8 @@ export default function Document() {
     title: "Aman Garg's writing, artwork and web development portfolio",
     description:
       'Digital artwork, poetry, prose and blog posts. Also web dev projects',
-    image: '/images/art-2.png'
+    image:
+      'https://www.amangarg.in/_next/image?url=%2Fimages%2Fart-0.png&w=3840&q=75'
   }
 
   return (
