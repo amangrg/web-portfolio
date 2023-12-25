@@ -6,7 +6,7 @@ export default function Document() {
     description:
       'Digital artwork, poetry, prose and blog posts. Also web dev projects',
     image:
-      'https://www.amangarg.in/_next/image?url=%2Fimages%2Fart-0.png&w=3840&q=75'
+      'https://www.amangarg.in/_next/image?url=%2Fimages%2Fart-1.png&w=3840&q=75'
   }
 
   return (
