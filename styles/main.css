@@ -34,6 +34,99 @@ body {
   background-attachment: fixed;
   color: #0f172a;
   min-height: 100vh;
+  text-rendering: optimizeLegibility;
+}
+
+:root {
+  color: #0f172a;
+}
+
+main article {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(1180px, calc(100vw - 3rem));
+}
+
+@media (max-width: 768px) {
+  main article {
+    max-width: calc(100vw - 2rem);
+  }
+}
+
+main article :where(p, li, span, a, strong) {
+  color: #0f172a;
+}
+
+main article :where(h1, h2, h3, h4) {
+  color: #0f172a;
+}
+
+main article a {
+  color: #1d4ed8;
+  text-decoration-color: rgba(59, 130, 246, 0.35);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  transition: color 150ms ease, text-decoration-color 150ms ease;
+}
+
+main article a:hover,
+main article a:focus {
+  color: #4338ca;
+  text-decoration-color: rgba(67, 56, 202, 0.6);
+}
+
+@keyframes floatGlow {
+  0% {
+    transform: translateY(12px) scale(0.97);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-4px) scale(1.01);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes softPulse {
+  0%,
+  100% {
+    box-shadow: 0 35px 70px rgba(15, 23, 42, 0.32);
+  }
+  50% {
+    box-shadow: 0 42px 85px rgba(59, 130, 246, 0.38);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeInUp 0.85s ease forwards;
+}
+
+.fade-in.delay-1 {
+  animation-delay: 0.15s;
+}
+
+.fade-in.delay-2 {
+  animation-delay: 0.3s;
+}
+
+.fade-in.delay-3 {
+  animation-delay: 0.45s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 b,
 strong,
@@ -190,6 +283,23 @@ img.next-image {
   box-shadow: 0 35px 70px rgba(15, 23, 42, 0.35);
 }
 
+.hero.hero--animated {
+  animation: floatGlow 1.2s ease forwards;
+  animation-delay: 0.05s;
+}
+
+.hero.hero--animated::before {
+  content: '';
+  position: absolute;
+  inset: auto auto -18% -22%;
+  width: clamp(180px, 35vw, 260px);
+  height: clamp(180px, 35vw, 260px);
+  background: radial-gradient(circle, rgba(244, 114, 182, 0.52), transparent 70%);
+  filter: blur(18px);
+  opacity: 0.8;
+  animation: softPulse 6s ease-in-out infinite;
+}
+
 .hero::after {
   content: '';
   position: absolute;
@@ -237,6 +347,14 @@ img.next-image {
   font-size: 1.05rem;
   line-height: 1.8;
   margin-bottom: 2rem;
+}
+
+.hero__copy--accent {
+  background: rgba(248, 250, 252, 0.12);
+  border-left: 3px solid rgba(250, 204, 21, 0.65);
+  padding: 1rem 1.25rem;
+  border-radius: 18px;
+  box-shadow: inset 0 1px 0 rgba(248, 250, 252, 0.25);
 }
 
 .hero__cta {
@@ -311,6 +429,7 @@ img.next-image {
   margin-bottom: 2.75rem;
   box-shadow: 0 25px 60px rgba(15, 23, 42, 0.1);
   backdrop-filter: blur(4px);
+  transition: transform 350ms ease, box-shadow 350ms ease;
 }
 
 .section-title {
@@ -323,6 +442,11 @@ img.next-image {
   line-height: 1.8;
   font-size: 1.02rem;
   color: #1e293b;
+}
+
+.page-section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 32px 75px rgba(15, 23, 42, 0.14);
 }
 
 .highlight-grid {
@@ -338,6 +462,7 @@ img.next-image {
   padding: 1.75rem;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(148, 163, 184, 0.2);
+  transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
 .highlight-card h3 {
@@ -349,6 +474,11 @@ img.next-image {
 .highlight-card p {
   margin: 0;
   color: #334155;
+}
+
+.highlight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 45px rgba(30, 64, 175, 0.2);
 }
 
 .experience-grid {
@@ -364,11 +494,26 @@ img.next-image {
   background: rgba(241, 245, 249, 0.9);
   border: 1px solid rgba(148, 163, 184, 0.25);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65);
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-card::after {
+  content: '';
+  position: absolute;
+  inset: auto auto -20% -20%;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(129, 140, 248, 0.2), transparent 70%);
+  z-index: 0;
+  transition: transform 220ms ease, opacity 220ms ease;
 }
 
 .experience-card h3 {
   margin-top: 0;
   margin-bottom: 0.25rem;
+  position: relative;
+  z-index: 1;
 }
 
 .experience-card span {
@@ -376,6 +521,8 @@ img.next-image {
   font-size: 0.9rem;
   color: #475569;
   margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 .experience-card ul {
@@ -384,6 +531,13 @@ img.next-image {
   display: grid;
   gap: 0.65rem;
   color: #334155;
+  position: relative;
+  z-index: 1;
+}
+
+.experience-card:hover::after {
+  transform: translate(10%, -10%);
+  opacity: 0.9;
 }
 
 .skill-badges {
@@ -400,6 +554,13 @@ img.next-image {
   color: #1e3a8a;
   font-weight: 600;
   font-size: 0.9rem;
+  transition: transform 200ms ease, background-color 200ms ease, box-shadow 200ms ease;
+}
+
+.skill-badge:hover {
+  transform: translateY(-3px);
+  background: rgba(14, 165, 233, 0.18);
+  box-shadow: 0 12px 25px rgba(14, 165, 233, 0.22);
 }
 
 .page-hero {
