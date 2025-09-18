@@ -4,6 +4,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Analytics } from '@vercel/analytics/react'
 
 import '../styles/main.css'
+import SiteNav from '../components/SiteNav'
 
 export default function Nextra({ Component, pageProps }) {
   return (
@@ -23,6 +24,7 @@ export default function Nextra({ Component, pageProps }) {
           crossOrigin="anonymous"
         />
       </Head>
+      <SiteNav />
       <Component {...pageProps} />
       <SpeedInsights />
       <Analytics />
