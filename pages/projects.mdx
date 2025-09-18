@@ -1,0 +1,62 @@
+---
+type: page
+title: Projects
+date: 2024-06-01
+---
+
+<section className="projects-hero">
+  <span className="hero__badge">Selected Work</span>
+  <h1>Engineering stories that blend design, data, and empathy.</h1>
+  <p>
+    Here are two projects that capture how I bridge research and real-world impact&mdash;one brings air
+    quality data to communities, the other decodes brain states from neural signals.
+  </p>
+</section>
+
+<section className="projects-grid">
+  <article className="project-card">
+    <div className="project-card__header">
+      <span className="project-card__tag">Data Visualization · Public Health</span>
+      <h2>USA Pollution Map</h2>
+    </div>
+    <p>
+      Built an interactive leaflet web app that layers AQI, particulate matter, and ozone data across
+      the United States. The experience empowers residents and policy makers to explore temporal
+      trends, compare regions, and surface hotspots using intuitive filters.
+    </p>
+    <ul className="project-card__bullets">
+      <li>Implemented performant map tiling and clustering for nationwide data coverage.</li>
+      <li>Crafted responsive visual storytelling that helped the project become an IEEE BHI finalist.</li>
+      <li>
+        Tech: React, Leaflet, GeoJSON, Netlify. <a href="https://pollutionmap.netlify.app/">Live demo</a>
+        · <a href="https://github.com/amangrg/pollution_map_usa">Source</a>
+      </li>
+    </ul>
+  </article>
+
+  <article className="project-card">
+    <div className="project-card__header">
+      <span className="project-card__tag">Neuroscience · Machine Learning</span>
+      <h2>Brain State Modeling with ARHMMs</h2>
+    </div>
+    <p>
+      Modeled player cognition in esports scenarios by fusing EEG signals with autoregressive hidden
+      Markov models. The pipeline uncovers state transitions that align with high-pressure in-game
+      events and reveals individualized neural signatures.
+    </p>
+    <ul className="project-card__bullets">
+      <li>
+        Engineered frequency-domain feature extraction (delta through gamma bands) using multi-taper
+        spectral analysis to retain discriminative patterns.
+      </li>
+      <li>
+        Evaluated ARHMM, CNN, and logistic regression baselines&mdash;achieving 81% accuracy on kill
+        event detection while highlighting subject-level variability via t-SNE explorations.
+      </li>
+      <li>
+        Tech: Python, NumPy, PyTorch, scikit-learn. <a href="https://github.com/amangrg/eeg-hidden-markov-model">Research repo</a>
+        · <a href="mailto:aman.garg@gatech.edu?subject=EEG%20HMM%20Collab">Request deep dive</a>
+      </li>
+    </ul>
+  </article>
+</section>
