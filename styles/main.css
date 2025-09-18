@@ -44,7 +44,7 @@ body {
 main article {
   margin-left: auto;
   margin-right: auto;
-  max-width: min(1180px, calc(100vw - 3rem));
+  max-width: min(1280px, calc(100vw - 4rem));
 }
 
 @media (max-width: 768px) {
@@ -164,7 +164,7 @@ img.next-image {
 }
 
 .nav-line .nav-link {
-  color: #69778c;
+  color: #0b1120;
 }
 
 .art-carousel {
@@ -194,7 +194,7 @@ img.next-image {
   justify-content: center;
   gap: 1.25rem;
   font-size: 0.95rem;
-  color: #334155;
+  color: #0b1120;
 }
 
 .art-carousel__control-button {
@@ -461,13 +461,13 @@ img.next-image {
 .section-title {
   font-size: clamp(1.75rem, 3vw, 2.3rem);
   margin-bottom: 1.5rem;
-  color: #1e293b;
+  color: #0b1120;
 }
 
 .page-section p {
   line-height: 1.8;
   font-size: 1.02rem;
-  color: #1e293b;
+  color: #0b1120;
 }
 
 .page-section:hover {
@@ -499,7 +499,7 @@ img.next-image {
 
 .highlight-card p {
   margin: 0;
-  color: #334155;
+  color: #0b1120;
 }
 
 .highlight-card:hover {
@@ -512,8 +512,8 @@ img.next-image {
   --timeline-marker-size: 0.85rem;
   position: relative;
   display: grid;
-  gap: clamp(1.75rem, 3.5vw, 2.75rem);
-  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+  gap: clamp(1.25rem, 2.75vw, 2.25rem);
+  margin-top: clamp(1.25rem, 2.5vw, 2.1rem);
   padding-left: calc(var(--timeline-offset) + 0.75rem);
 }
 
@@ -580,7 +580,7 @@ img.next-image {
 .timeline-entry__card {
   position: relative;
   border-radius: 22px;
-  padding: clamp(1.5rem, 3vw, 2.2rem);
+  padding: clamp(1.35rem, 2.6vw, 2rem);
   background: rgba(248, 250, 252, 0.94);
   border: 1px solid rgba(148, 163, 184, 0.32);
   box-shadow: 0 24px 55px rgba(15, 23, 42, 0.12);
@@ -613,7 +613,7 @@ img.next-image {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-weight: 600;
-  color: #1e293b;
+  color: #0b1120;
   position: relative;
   z-index: 1;
 }
@@ -622,8 +622,8 @@ img.next-image {
   padding-left: 1.1rem;
   margin: 0;
   display: grid;
-  gap: 0.7rem;
-  color: #334155;
+  gap: 0.65rem;
+  color: #0b1120;
   position: relative;
   z-index: 1;
 }
@@ -704,7 +704,7 @@ img.next-image {
   text-transform: uppercase;
   letter-spacing: 0.18em;
   font-size: 0.75rem;
-  color: #475569;
+  color: #0b1120;
   font-weight: 700;
 }
 
@@ -718,7 +718,7 @@ img.next-image {
 .page-hero p {
   max-width: 640px;
   font-size: 1.05rem;
-  color: #1e293b;
+  color: #0b1120;
 }
 
 .project-grid {
@@ -757,7 +757,7 @@ img.next-image {
 .project-card p {
   margin-top: 0;
   margin-bottom: 1.5rem;
-  color: #1e293b;
+  color: #0b1120;
   line-height: 1.75;
 }
 
@@ -766,7 +766,7 @@ img.next-image {
   padding-left: 1.1rem;
   display: grid;
   gap: 0.7rem;
-  color: #334155;
+  color: #0b1120;
 }
 
 .project-links {
