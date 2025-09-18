@@ -41,6 +41,49 @@ body {
   color: #0f172a;
 }
 
+.nx-prose {
+  --tw-prose-body: #0f172a;
+  --tw-prose-headings: #0f172a;
+  --tw-prose-lead: #0f172a;
+  --tw-prose-links: #1d4ed8;
+  --tw-prose-bold: #0f172a;
+  --tw-prose-counters: #0f172a;
+  --tw-prose-bullets: #0f172a;
+  --tw-prose-hr: #cbd5f5;
+  --tw-prose-quotes: #0f172a;
+  --tw-prose-quote-borders: #cbd5f5;
+  --tw-prose-captions: #1e293b;
+  --tw-prose-code: #0f172a;
+  --tw-prose-pre-code: #0f172a;
+  --tw-prose-pre-bg: #f1f5f9;
+  --tw-prose-th-borders: #0f172a;
+  --tw-prose-td-borders: #cbd5e1;
+  color: #0f172a;
+}
+
+.nx-prose :where(p,
+    li,
+    span,
+    strong,
+    em,
+    blockquote,
+    figcaption,
+    code,
+    a) {
+  color: inherit;
+}
+
+.nextra-content :where(p,
+    li,
+    span,
+    strong,
+    em,
+    blockquote,
+    figcaption,
+    code) {
+  color: #0f172a;
+}
+
 main article {
   margin-left: auto;
   margin-right: auto;
