@@ -37,6 +37,19 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+body :where(p, li, span, strong, em, blockquote, figcaption, time,
+        small, label) {
+  color: #0f172a;
+}
+
+body :where(h1, h2, h3, h4, h5, h6) {
+  color: #0b1120;
+}
+
+body :where(code, pre) {
+  color: #0b1120;
+}
+
 :root {
   color: #0f172a;
 }
