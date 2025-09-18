@@ -92,6 +92,16 @@ main article {
   max-width: min(1320px, calc(100vw - 3rem));
 }
 
+.nx-prose {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .nx-prose {
+    max-width: min(65vw, 1320px);
+  }
+}
+
 @media (max-width: 768px) {
   main article {
     max-width: calc(100vw - 2rem);
