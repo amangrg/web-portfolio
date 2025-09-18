@@ -1,0 +1,80 @@
+---
+type: page
+title: Projects
+date: 2024-06-01
+---
+<div className="page-hero">
+  <span className="page-hero__eyebrow">Selected Work</span>
+  <h1>Projects</h1>
+  <p>
+    A closer look at the systems, visualizations, and scientific tooling I build. Each project weaves together product intuition,
+    rigorous engineering, and thoughtful storytelling.
+  </p>
+</div>
+
+<section className="page-section">
+  <div className="project-grid">
+    <article className="project-card">
+      <span className="project-card__tag">Data Storytelling</span>
+      <h2>Visualization of U.S. Air Pollution</h2>
+      <p>
+        An interactive map experience that layers EPA data, satellite imagery, and public health context to make air quality
+        disparities tangible. The experience powers civic discussions and was recognized as an IEEE BHI 2024 finalist.
+      </p>
+      <ul className="project-meta">
+        <li>
+          <strong>Highlights:</strong> Dynamic filtering across pollutants and seasons, animation-ready time series, and direct calls
+          to action for environmental advocates.
+        </li>
+        <li><strong>Stack:</strong> React, Leaflet, Python ETL, Netlify, Mapbox basemaps.</li>
+      </ul>
+      <div className="project-links">
+        <a className="button" href="https://pollutionmap.netlify.app/" target="_blank" rel="noopener noreferrer">
+          Live Demo
+        </a>
+        <a
+          className="button button--ghost"
+          href="https://github.com/amangrg/pollution_map_usa"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub Repo
+        </a>
+      </div>
+    </article>
+    <article className="project-card">
+      <span className="project-card__tag">Neuroscience ML</span>
+      <h2>Brain State Modeling with Hidden Markov Models</h2>
+      <p>
+        A computational neuroscience study decoding player performance in MOBA games from EEG signals. Autoregressive HMMs and
+        convolutional models reveal the neural signatures of high-intensity kill and death events while surfacing subject-level
+        variability in attention.
+      </p>
+      <ul className="project-meta">
+        <li>
+          <strong>Highlights:</strong> Achieved 81% accuracy on high-signal subjects, uncovered band power features linked to in-game
+          actions, and compared HMMs with logistic regression baselines.
+        </li>
+        <li><strong>Stack:</strong> Python, PyTorch, NumPy, SciPy, Matplotlib, t-SNE visualization.</li>
+      </ul>
+      <div className="project-links">
+        <a
+          className="button button--ghost"
+          href="https://github.com/amangrg/eeg-hidden-markov-model"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub Repo
+        </a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section className="page-section">
+  <h2 className="section-title">Let&apos;s Build What&apos;s Next</h2>
+  <p>
+    I&apos;m continually iterating on these projects—deploying richer datasets, adding predictive insights, and refining storytelling.
+    Have an idea or a dataset you want to bring to life? Reach out at <a href="mailto:aman.garg@gatech.edu">aman.garg@gatech.edu</a>.
+  </p>
+</section>
