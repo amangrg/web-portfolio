@@ -22,7 +22,6 @@ export default function Document() {
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://amangarg.in" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@amanmakesart" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
